@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro - Ingeniería en Software</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; max-width: 600px; line-height: 1.6; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input { width: 100%; padding: 8px; box-sizing: border-box; }
+        input[type="color"], input[type="radio"], input[type="checkbox"] { width: auto; }
+        .inline-group { display: flex; align-items: center; gap: 10px; }
+        .inline-group label { font-weight: normal; margin-bottom: 0; }
+        button { padding: 10px 15px; background-color: #0055ff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Facultad de Telemática - Perfil de Alumno</h1>
+        <p>Por favor, completa el siguiente formulario. Los campos marcados con <strong>*</strong> son <em>estrictamente obligatorios</em> para tu expediente.</p>
+    </header>
+
+    <main>
+        <form action="#" method="get">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre Completo <strong>*</strong>:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Institucional <strong>*</strong>:</label>
+                <input type="email" id="correo" name="correo" placeholder="alguien@ucol.mx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="312 000 0000">
+            </div>
+
+            <div class="form-group">
+                <label for="semestre">Semestre actual:</label>
+                <input type="number" id="semestre" name="semestre" min="1" max="9">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                <input type="date" id="fecha_ingreso" name="fecha_ingreso">
+            </div>
+
+            <div class="form-group">
+                <label for="color_interfaz">Color preferido para tu panel de usuario:</label>
+                <input type="color" id="color_interfaz" name="color_interfaz" value="#00aa00">
+            </div>
+
+            <div class="form-group">
+                <label>Modalidad de estudio:</label>
+                <div class="inline-group">
+                    <input type="radio" id="presencial" name="modalidad" value="presencial" checked>
+                    <label for="presencial">Presencial</label>
+                    <input type="radio" id="distancia" name="modalidad" value="distancia">
+                    <label for="distancia">A Distancia</label>
+                </div>
+            </div>
+
+            <div class="form-group inline-group">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Confirmo que mis datos son <strong>correctos</strong> y están <em>actualizados</em>.</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Guardar Expediente</button>
+            </div>
+
+        </form>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><em>Práctica de Formularios y Tipos de Input.</em><br> 
+        <strong>Nota:</strong> Este es un documento de prueba.</p>
+    </footer>
+
+</body>
+</html>
